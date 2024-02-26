@@ -6,8 +6,42 @@
     xmlns:views="clr-namespace:ShellLessonStep2.Views"
     Shell.FlyoutBehavior="Flyout">
 
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="tabs">
 
-    <!-- More than one Flyout item with multiple tabs-->
+    <Tab Title="Domestic" Icon="paw.png" Route="Cat_Dog">
+        
+        <ShellContent
+            Title="Cats" Icon="cat.png"
+            ContentTemplate="{DataTemplate views:CatsView}"
+            Route="Cat" />
+        <ShellContent
+            Title="Dogs" Icon="dog.png"
+            ContentTemplate="{DataTemplate views:DogsView}"
+            Route="Dog" />
+    </Tab>
+    <ShellContent
+        Title="Monkeys" Icon="monkey.png"
+        ContentTemplate="{DataTemplate views:MonkeyView}"
+        Route="Monkey" />
+    <ShellContent
+        Title="Elephants" Icon="elephant.png"
+        ContentTemplate="{DataTemplate views:ElephantsView}"
+        Route="Elephant" />
+    <ShellContent
+        Title="Bears" Icon="bear.png"
+        ContentTemplate="{DataTemplate views:BearsView}"
+        Route="Bear" />
+       
+    </FlyoutItem>
+
+    <MenuItem
+        Command="{Binding HelpCommand}"
+        IconImageSource="help.png"
+        Text="Help" />
+
+
+
+    <!-- More than one Flyout item with multiple tabs--><!--
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Tabs 1,2">
         <ShellContent
             Title="Tab1" Icon="icon1.png"
@@ -31,7 +65,7 @@
     <MenuItem
         Command="{Binding InfoCommand}"
         IconImageSource="info.png"
-        Text="About" />
+        Text="About" />-->
 
 
     <!-- Flyout item with multiple tabs-->

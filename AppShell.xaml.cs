@@ -8,7 +8,7 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
         this.BindingContext = this;
-        InfoCommand = new Command(OnInfoClicked);
+        HelpCommand = new Command(OnHelpClicked);
         InitializeComponent();
 		RegisterRoutings();
 	}
@@ -18,9 +18,9 @@ public partial class AppShell : Shell
 		Routing.RegisterRoute("modalPage", typeof(ModalPage));
 	}
 
-    public ICommand InfoCommand { get; set; }
-	private void OnInfoClicked()
+    public ICommand HelpCommand { get; set; }
+	private void OnHelpClicked()
 	{
-		DisplayAlert("Info", "This is a demo for using Shell!", "Ok");
+		DisplayAlert("Help", "WE LOVE OFER", "Ok");
 	}
 }
