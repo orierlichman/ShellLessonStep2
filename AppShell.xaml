@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:ShellLessonStep2.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="tabs">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="tabs" >
 
     <Tab Title="Domestic" Icon="paw.png" Route="Cat_Dog">
         

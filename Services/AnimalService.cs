@@ -1,4 +1,5 @@
-﻿using ShellLessonStep2.Models;
+﻿using CoreML;
+using ShellLessonStep2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -542,28 +543,32 @@ namespace ShellLessonStep2.Services
             });
         }
 
-        public IList<Animal> GetMonkeys()
-        {
-            return Monkeys;
 
-        }
-        public IList<Animal> GetBears()
+        public async Task<List<Animal>> GetBears()
         {
             return Bears;
         }
-        public IList<Animal> GetElephants()
+
+        public async Task<List<Animal>> GetMonkeys()
+        {
+            return Monkeys;
+        }
+
+        public async Task<List<Animal>> GetElephants()
         {
             return Elephants;
         }
 
-        public IList<Animal> GetCats()
+        public async Task<List<Animal>> GetCats()
         {
             return Cats;
         }
-        public IList<Animal> GetDogs()
+
+        public async Task<List<Animal>> GetDogs()
         {
             return Dogs;
         }
+
 
     }
 }
